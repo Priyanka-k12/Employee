@@ -1,0 +1,147 @@
+import java.util.Scanner;
+
+public class Employee {
+	String name,Address;
+
+    float salary; 
+
+    int yoj;
+
+    
+
+    public void getInfo(String name, String Address, float salary,int yoj)
+
+    {
+
+        this.name = name;
+
+        this.Address = Address;
+
+        this.salary = salary;
+
+        this.yoj = yoj;          
+
+    }
+
+    
+
+    public void printInfo()
+
+    {
+
+        System.out.println(name  + "\t\t" + Address + "\t\t" + salary + "\t\t" +yoj );  
+
+    }
+
+
+
+    public static void main(String[] args){
+
+        String [] name = new String[3];
+
+        int [] yoj = new int[3];
+
+        float [] salary = new float [3];
+
+        String [] Address = new String[3];
+
+        
+
+       for (int i = 0; i <3; i++)
+
+        {  
+
+            System.out.println("\n---Enter Employee " +(i+1)+" Information: ---");
+
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter the name of Employee: ");
+
+            name[i]=sc.nextLine();
+
+            System.out.println("Enter Year of Joining: ");
+
+            yoj[i]=sc.nextInt();
+
+            System.out.println("Enter Salary: ");
+
+            salary[i]=sc.nextFloat();
+
+            sc.nextLine();
+
+            System.out.println("Enter Address: ");
+
+            Address[i]=sc.nextLine();
+
+        }
+
+      
+
+        Employee em1 = new Employee(); 
+
+        em1.getInfo(name[0],Address[0],salary[0], yoj[0]);
+
+        
+
+        Employee em2 = new Employee();
+
+        em2.getInfo(name[1],Address[1],salary[1], yoj[1]);
+
+       
+
+        Employee em3 = new Employee(); 
+
+        em3.getInfo(name[2],Address[2],salary[2], yoj[2]);
+
+        
+
+        System.out.println("Name \t\tAddress \tddSalary   \tYear Of Joining");
+
+        em1.printInfo();
+
+        em2.printInfo();
+
+        em3.printInfo();
+
+
+}
+
+}
+
+//Output 
+
+/*---Enter Employee 1 Information: ---
+Enter the name of Employee: 
+Robert
+Enter Year of Joining: 
+1994
+Enter Salary: 
+64
+Enter Address: 
+WallsStreet
+
+---Enter Employee 2 Information: ---
+Enter the name of Employee: 
+Sam
+Enter Year of Joining: 
+2000
+Enter Salary: 
+68
+Enter Address: 
+WallsStreet
+
+---Enter Employee 3 Information: ---
+Enter the name of Employee: 
+John
+Enter Year of Joining: 
+1999
+Enter Salary: 
+26
+Enter Address: 
+WallsStreet
+Name 		Address 	ddSalary   	Year Of Joining
+Robert		WallsStreet		64.0		1994
+Sam		WallsStreet		68.0		2000
+John		WallsStreet		26.0		1999
+ * 
+ */
